@@ -1,0 +1,40 @@
+.icon {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.button {
+  color: #aaa;
+}
+.button.active {
+  color: #111;
+}
+
+.menu {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  background-color: #eee;
+}
+.toolbar {
+}
+
+blockquote {
+  border-left: 2px solid #ddd;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  color: #aaa;
+  font-style: italic;
+}
+
+:not(pre) > code {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 3px;
+}
+
+[role="textbox"] {
+  padding: 16px;
+}
