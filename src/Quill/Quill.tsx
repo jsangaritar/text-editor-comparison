@@ -5,11 +5,17 @@ import "react-quill/dist/quill.snow.css";
 import "./Quill.css";
 
 export default function Quill() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(
+    `<p>This is editable <strong>rich</strong> text, <em>much</em> better than a <code>&lt;textarea&gt;</code>!</p><p>Since it's rich text, you can do things like turn a selection of text <strong>bold</strong>, or add a semantically rendered block quote in the middle of the page, like this:</p><p><br></p><blockquote>A wise quote.</blockquote><p class="ql-align-center">Try it out for yourself!</p>`
+  );
 
   return (
     <>
-      <div className="editor">
+      <div
+        className={`editor ${
+          process.env.NODE_ENV !== "production" ? "duplicate-toolbar" : ""
+        }`}
+      >
         <ReactQuill
           modules={{
             toolbar: [
